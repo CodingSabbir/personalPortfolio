@@ -1,7 +1,7 @@
 import React from 'react';
 import bgImg from '../img/bgimg (2).png'
 import { FaArrowRight } from "react-icons/fa6";
-
+//
 
 const Home = () => {
 return (
