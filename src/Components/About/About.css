@@ -1,8 +1,8 @@
-img {
+.about img {
     --s: 15px;  
     --b: 2px;   
-    --w: 200px; 
-    --c: #7B3B3B;
+    --w: 500px; 
+    --c: #FFB400;
     
     width: var(--w);
     aspect-ratio: 1;

@@ -33,16 +33,16 @@ const Navbar = () => {
         </div>
         <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="text-sm lg:flex-grow md:text-end">
-            <a   href="#docs" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-4">
+            <a   href="#docs" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-5">
               Home
             </a>
-            <a href="#examples" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-4">
+            <a href="#examples" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-5">
               About
             </a>
-            <a href="#blog" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-4">
+            <a href="#blog" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-5">
               Service
             </a>
-            <a href="#blog" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-4">
+            <a href="#blog" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white mr-5">
               Portfolio
             </a>
             <a href="#blog" className="block mt-4 lg:inline-block lg:mt-0 text-[16px] text-[#FFB400] hover:text-white">
