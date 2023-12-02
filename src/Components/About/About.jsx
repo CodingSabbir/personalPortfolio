@@ -8,14 +8,18 @@ const About = () => {
       <div className=' mx-5 md:mx-10'>
         <h1 className='text-center mt-5 text-[51px] font-semibold text-[#FFF] mb-20 '>ABOUT <span className='text-[#FFB400]'>ME</span></h1>
           <div className=" about grid md:grid-cols-2  md:mt-8 ">
-           <div>
+           <div  data-aos="zoom-in-right"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
            <img
                 src={aboutImg}
                 alt="Vintage Car"
                 className="md:rounded-lg "
             />
            </div>
-           <div>
+           <div data-aos="zoom-in-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
             <h1 className='text-[32px] font-serif font-semibold text-[#FFB400] mt-16 md:mt-0'>Sabbir Rahman</h1>
             <h3 className=' text-[14px] md:text-[22px] my-4'>A Lead Frontend Developer  based in Bangladesh</h3>
             <p className='font-mono text-left  '>I  frontend developer services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions. Check out my Portfolio</p>
