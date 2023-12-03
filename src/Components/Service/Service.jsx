@@ -8,7 +8,7 @@ import Skill from '../Skill/Skill';
 const Service = () => {
 
 return (
-<div>
+<div id='service'>
     <div className='mx-5  md:mx-10 '>
         <h1 className='text-center mt-5 md:mt-10 text-[51px] font-semibold text-[#FFF]'> <span
                 className='text-[#FFB400]'>My</span> Service</h1>

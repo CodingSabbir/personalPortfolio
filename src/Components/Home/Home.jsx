@@ -7,7 +7,7 @@ const Home = () => {
  
 return (
     
-<div className=" mx-5 md:mx-10 mt-5 md:mt-10"  data-aos="fade-up"
+<div id='home' className=" mx-5 md:mx-10 mt-5 md:mt-10"  data-aos="fade-up"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
        

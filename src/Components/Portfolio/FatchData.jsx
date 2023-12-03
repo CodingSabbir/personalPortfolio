@@ -1,27 +1,41 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const FatchData = () => {
 const portfolio = [
 {
-name: 'My best client',
+img:
+'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
 category: ['all', 'frontend', 'ux-ui'],
 },
 {
-name: 'My favorite case',
+img: 'https://www.pngmart.com/files/15/Apple-iPhone-12-PNG-Picture.png',
 category: ['all', 'mobile', 'ux-ui'],
 },
 {
-name: 'A old job',
+img: 'https://png.pngtree.com/png-vector/20220520/ourmid/pngtree-front-end-development-it-concept-png-image_4626863.png',
 category: ['all', 'frontend'],
 },
 {
-name: 'It is a really cool website',
+img: 'https://t3.ftcdn.net/jpg/05/31/71/02/360_F_531710260_ByieqNe7Ut6QBHgIR7xgdsxH7gICrHr1.jpg',
 category: ['all', 'frontend', 'ux-ui'],
 },
 {
-name: 'Something more',
+img: 'https://static.vecteezy.com/system/resources/thumbnails/019/617/561/small/group-of-travel-people-png.png',
 category: ['all', 'others'],
+},
+{
+img:
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRah3jkk00tI1fGkYPaKRxjNclphW-ccUw3bw&usqp=CAU',
+category: ['all', 'frontend', 'ux-ui'],
+},
+{
+img: 'https://t3.ftcdn.net/jpg/05/31/71/02/360_F_531710260_ByieqNe7Ut6QBHgIR7xgdsxH7gICrHr1.jpg',
+category: ['all', 'frontend', 'ux-ui'],
+},
+{
+img: 'https://png.pngtree.com/png-vector/20200718/ourmid/pngtree-ui-design-concept-flat-design-png-image_2307292.jpg',
+category: ['all', 'mobile', 'ux-ui'],
 },
 ];
 
@@ -54,7 +68,7 @@ color: '#000',
 };
 
 return (
-<div className='mx-5 md:mx-10'>
+<div id='portfolio' className='mx-5 md:mx-10'>
     <div>
         <h1 className='text-center mt-5  text-[51px] font-semibold text-[#FFB400] uppercase'> portfolio</h1>
     </div>
@@ -68,7 +82,7 @@ return (
         >
         Frontend
         </Link>
-        <Link to="/mobile" style={filter === 'mobile' ? activeLinkStyle : linkStyle} onClick={()=>
+        <Link  to="/mobile" style={filter === 'mobile' ? activeLinkStyle : linkStyle} onClick={()=>
         setFilter('mobile')}
         >
         Mobile
@@ -86,13 +100,18 @@ return (
     </div>
     <div className="portfolio__container">
         {/* {projects.map(item => (item.filtered === true ? <span key={item.name}>{item.name}</span> : ''))} */}
-        <div className="portfolio__container">
+        <div className="portfolio__container grid grid-cols-2 md:grid-cols-4 py-4 gap-5">
             {projects.map((item) =>
             item.filtered === true ? (
-            <div key={item.name} className="project-item">
-                <h3>{item.name}</h3>
-              
+          
+             <div>
+                <p class="block rounded-lg p-2 md:p-4 shadow-sm shadow-indigo-100">
+                    <img alt="Home" src={item.img} class=" h-28 md:h-56 w-full rounded-md object-cover" />
+
+
+                </p>
             </div>
+
             ) : (
             ''
             )
@@ -104,3 +123,6 @@ return (
 };
 
 export default FatchData;
+
+
+

@@ -16,9 +16,7 @@ const Skill = () => {
         },
         ];
     return (
-        <div data-aos="zoom-in"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000">
+        <div>
            <div className='grid grid-cols-2 md:grid-cols-4 md:flex justify-center mt-5 md:mt-10 mx-5 md:mx-10 gap-10 md:gap-28'>
            {
             skillsData.map((skill,index)=>(

@@ -2,25 +2,30 @@ import React from 'react';
 import './About.css'
 import aboutImg from '../img/about-image.jpg'
 import { IoMdCloudDownload } from "react-icons/io";
+import CV from '../img/Professional CV Resume.pdf'
 
 const About = () => {
+    const onButtonClick = () => {
+        const link = document.createElement('a');
+        link.href = CV;
+        link.download = 'Professional_CV_Resume.pdf'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
     return (
-      <div className=' mx-5 md:mx-10'>
-        <h1 className='text-center mt-5 text-[51px] font-semibold text-[#FFF] mb-20 '>ABOUT <span className='text-[#FFB400]'>ME</span></h1>
+      <div id='about' className=' mx-5 md:mx-10'>
+        <h1 className='text-center mt-5 text-[51px] font-semibold text-[#FFF]  '>ABOUT <span className='text-[#FFB400]'>ME</span></h1>
           <div className=" about grid md:grid-cols-2  md:mt-8 ">
-           <div  data-aos="zoom-in-right"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
+           <div>
            <img
                 src={aboutImg}
                 alt="Vintage Car"
                 className="md:rounded-lg "
             />
            </div>
-           <div data-aos="zoom-in-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-            <h1 className='text-[32px] font-serif font-semibold text-[#FFB400] mt-16 md:mt-0'>Sabbir Rahman</h1>
+           <div>
+            <h1 className='text-[32px] font-serif font-semibold text-[#FFB400] mt-2 md:mt-0'>Sabbir Rahman</h1>
             <h3 className=' text-[14px] md:text-[22px] my-4'>A Lead Frontend Developer  based in Bangladesh</h3>
             <p className='font-mono text-left  '>I  frontend developer services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions. Check out my Portfolio</p>
             <div className='md:flex  gap-3 md:gap-7 mt-10'>
@@ -30,7 +35,7 @@ const About = () => {
             </div>
             <div className='flex gap-2 md:gap-10 my-3 md:my-0'>
             <div className='text-[#FFB400] font-serif'>Phone <span className='border-r ml-16 md:ml-5'></span></div>
-                <div className='font-mono md:font-semibold'>+001780836579</div>
+                <div className='font-mono md:font-semibold'>+8801780836579</div>
             </div>
             </div>
 
@@ -56,8 +61,10 @@ const About = () => {
             </div>
             </div>
             <a className=" my-4 md:mt-10 group inline-block rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
-                href="/download">
+                href="#">
                 <span
+                    onClick={onButtonClick}
+                   
                     className="block rounded-full bg-black px-8 py-3 text-sm font-medium group-hover:bg-transparent flex items-center tracking-widest">
                     Download CV
                     <IoMdCloudDownload  className="ml-2 text-[20px]" />
@@ -72,3 +79,6 @@ const About = () => {
 };
 
 export default About;
+
+
+
